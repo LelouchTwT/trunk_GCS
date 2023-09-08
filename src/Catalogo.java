@@ -35,11 +35,47 @@ public class Catalogo {
     }
 
     public void addRevista(String nome, int anoPubli, int volume, String editora, String assunto,
-    ArrayList<String> autores) {
+            ArrayList<String> autores) {
         Revista aux = new Revista(revistaCurrentId, nome, getDate(), anoPubli, volume, editora, assunto, autores);
         revistas.add(aux);
 
         revistaCurrentId++;
+    }
+
+    public CD searchCd(int id) {
+        for (CD cd : cds) {
+            if (cd.getId() == id) {
+                return cd;
+            }
+        }
+        return null;
+    }
+
+    public DVD searchDvd(int id) {
+        for (DVD dvd : dvds) {
+            if (dvd.getId() == id) {
+                return dvd;
+            }
+        }
+        return null;
+    }
+
+    public Livro searchLivro(int id) {
+        for (Livro livro : livros) {
+            if (livro.getId() == id) {
+                return livro;
+            }
+        }
+        return null;
+    }
+
+    public Revista searchRevista(int id) {
+        for (Revista revista : revistas) {
+            if (revista.getId() == id) {
+                return revista;
+            }
+        }
+        return null;
     }
 
     private String getDate() {
