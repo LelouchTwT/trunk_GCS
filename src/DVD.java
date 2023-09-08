@@ -1,15 +1,15 @@
 import java.util.ArrayList;
 
 public class DVD {
-    int id;
-    String nome;
-    int dataAquisicao;
-    ArrayList<String> autores = new ArrayList<String>();
+    private int id;
+    private String nome;
+    private String dataAquisicao;
+    private ArrayList<String> autores = new ArrayList<String>();
 
-    int tipo;
-    String descricao;
+    private int tipo;
+    private String descricao;
 
-    public DVD(int id, String nome, int dataAquisicao, ArrayList<String> autores, int tipo, String descricao) {
+    public DVD(int id, String nome, String dataAquisicao, ArrayList<String> autores, int tipo, String descricao) {
         this.id = id;
         this.nome = nome;
         this.dataAquisicao = dataAquisicao;
@@ -26,7 +26,7 @@ public class DVD {
         return this.nome;
     }
 
-    public int getDataAquisicao() {
+    public String getDataAquisicao() {
         return this.dataAquisicao;
     }
 
